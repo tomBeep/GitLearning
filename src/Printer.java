@@ -33,3 +33,9 @@ class UpperCasePrinter implements Printer {
         System.out.println(toPrint.toUpperCase());
     }
 }
+
+class LowerCasePrinter implements Printer {
+    public void print(String toPrint) {
+        System.out.println(toPrint.toLowerCase());
+    }
+}
