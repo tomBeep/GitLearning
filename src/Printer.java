@@ -24,7 +24,7 @@ class FramePrinter implements Printer {
 
 class BasicPrinter implements Printer {
     public void print(String toPrint) {
-        System.out.println("BasicPrinter: " + toPrint);
+        System.out.println(toPrint);
     }
 }
 
