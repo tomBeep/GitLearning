@@ -1,13 +1,9 @@
 public class Main {
     public static void main(String[] args) {
-        String toPrint = "WORKING";
+        String toPrint = "This is text that is being printed in a random format";
 
         Printer[] printers = new Printer[]{
-                new FramePrinter(),
-                new UglyPrinter(),
-                new BasicPrinter(),
-                new UpperCasePrinter(),
-                new LowerCasePrinter()
+                new CamelCasePrinter()
         };
 
         Printer randomPrinter = printers[(int) (Math.random() * printers.length)];
