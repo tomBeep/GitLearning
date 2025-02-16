@@ -39,3 +39,24 @@ class LowerCasePrinter implements Printer {
         System.out.println(toPrint.toLowerCase());
     }
 }
+
+class CamelCasePrinter implements Printer {
+    public void print(String toPrint) {
+        boolean upperCaseNextChar = false;
+        boolean first = true;
+        for (char c : toPrint.toCharArray()) {
+            if (first) {
+                first = false;
+                System.out.print(Character.toLowerCase(c));
+            } else if (c == ' ') {
+                upperCaseNextChar = true;
+            } else if (upperCaseNextChar) {
+                System.out.print(Character.toUpperCase(c));
+                upperCaseNextChar = false;
+            } else {
+                System.out.print(Character.toLowerCase(c));
+            }
+        }
+        System.out.println();
+    }
+}
