@@ -27,3 +27,9 @@ class BasicPrinter implements Printer {
         System.out.println(toPrint);
     }
 }
+
+class UpperCasePrinter implements Printer {
+    public void print(String toPrint) {
+        System.out.println(toPrint.toUpperCase());
+    }
+}
