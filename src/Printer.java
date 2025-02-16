@@ -60,3 +60,11 @@ class CamelCasePrinter implements Printer {
         System.out.println();
     }
 }
+
+class SnakeCasePrinter implements Printer {
+    public void print(String toPrint) {
+        toPrint = toPrint.replaceAll(" ", "_");
+        toPrint = toPrint.toLowerCase();
+        System.out.println(toPrint);
+    }
+}
