@@ -24,7 +24,13 @@ class FramePrinter implements Printer {
 
 class BasicPrinter implements Printer {
     public void print(String toPrint) {
-        System.out.println(toPrint);
+        System.out.println("BasicPrinter: " + toPrint);
+    }
+}
+
+class LogPrinter implements Printer {
+    public void print(String toPrint) {
+        System.out.println("INFO: " + toPrint);
     }
 }
 
