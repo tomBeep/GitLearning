@@ -24,7 +24,9 @@ class FramePrinter implements Printer {
 
 class HtmlPrinter implements Printer {
     public void print(String toPrint) {
-        System.out.println("<html>" + toPrint + "</html>");
+        toPrint = toPrint.replaceAll("<", "&lt;");
+        toPrint = toPrint.replaceAll(">", "&gt;");
+        System.out.println("<html>" + toPrint + "</html>"); // Print html!
     }
 }
 
